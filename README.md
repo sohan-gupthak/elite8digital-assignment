@@ -2,6 +2,11 @@
 
 A modern, responsive website for Elite8Digital, a creative digital agency specializing in web development, UI/UX design, 3D visualization, and digital marketing. Built with React, TypeScript, and Tailwind CSS, featuring stunning animations and interactive elements.
 
+## Demo
+https://sohan-gupthak.github.io/elite8digital-assignment/
+
+![Screenshot 2025-05-23 001409](https://github.com/user-attachments/assets/7c2da038-e489-4d73-9454-8b2b30489d50)
+
 ## Features
 
 - ⚡️ **Vite** - Lightning fast build tool with instant HMR
