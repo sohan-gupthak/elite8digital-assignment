@@ -185,10 +185,10 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <GradientButton href="/work" gradient="purple-blue" size="lg" hoverEffect="both">
+              <GradientButton href="#work" gradient="purple-blue" size="lg" hoverEffect="both">
                 Explore Our Work
               </GradientButton>
-              <GradientButton href="/contact" gradient="blue-teal" size="lg" hoverEffect="both">
+              <GradientButton href="#contact" gradient="blue-teal" size="lg" hoverEffect="both">
                 Get in Touch
               </GradientButton>
             </motion.div>
@@ -318,7 +318,7 @@ const Home = () => {
                     <p className="text-white/70">{service.description}</p>
                   </div>
                   <GradientButton 
-                    href="/contact" 
+                    href="#contact" 
                     size="sm" 
                     gradient={service.color.includes('purple') ? 'purple-blue' : 
                               service.color.includes('blue') ? 'blue-teal' : 
@@ -415,7 +415,7 @@ const Home = () => {
                           </span>
                         ))}
                       </div>
-                      <Link to="/work" className="text-sm font-medium text-purple-400 flex items-center group">
+                      <Link to="work" className="text-sm font-medium text-purple-400 flex items-center group">
                         View Project
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -428,7 +428,7 @@ const Home = () => {
           </div>
           
           <div className="text-center mt-12">
-            <AnimatedButton href="/work" variant="outline" size="lg">
+            <AnimatedButton href="#work" variant="outline" size="lg">
               View All Projects
             </AnimatedButton>
           </div>
@@ -547,7 +547,7 @@ const Home = () => {
               <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
                 Let's collaborate to create a stunning digital experience that captivates your audience and drives results.
               </p>
-              <AnimatedButton href="/contact" variant="primary" size="lg">
+              <AnimatedButton href="#contact" variant="primary" size="lg">
                 Get Started Today
               </AnimatedButton>
             </motion.div>

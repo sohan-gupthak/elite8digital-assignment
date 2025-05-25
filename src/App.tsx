@@ -2,8 +2,15 @@ import { useEffect } from 'react';
 import AppRoutes from './routes';
 import AnimatedCursor from './components/ui/AnimatedCursor';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const App = () => {
+	const location = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location.pathname]);
+
 	// Disable default cursor when custom cursor is active
 	useEffect(() => {
 		document.body.classList.add('custom-cursor');

@@ -173,7 +173,7 @@ const Work = () => {
 						<p className="text-xl text-gray-300 mb-8">
 							Ready to start your next project? Contact us today to discuss how we can help bring your vision to life.
 						</p>
-						<a href="/contact" className="btn btn-primary btn-lg">
+						<a href="#contact" className="btn btn-primary btn-lg">
 							Get in Touch
 						</a>
 					</div>

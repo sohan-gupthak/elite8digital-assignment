@@ -91,7 +91,7 @@ export default function Navbar() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <AnimatedButton
-              href="/contact"
+              href="#contact"
               variant="outline"
               size="sm"
               className="ml-4"
@@ -163,7 +163,7 @@ export default function Navbar() {
                   transition={{ duration: 0.3, delay: 0.4 }}
                   className="pt-2"
                 >
-                  <AnimatedButton href="/contact" variant="outline" size="sm">
+                  <AnimatedButton href="#contact" variant="outline" size="sm">
                     Get in Touch
                   </AnimatedButton>
                 </motion.div>
