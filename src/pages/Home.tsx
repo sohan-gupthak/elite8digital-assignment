@@ -32,27 +32,27 @@ const Home = () => {
   // Services data
   const services = [
     {
-      title: 'Web Development',
-      description: 'We build responsive, high-performance websites and web applications tailored to your business needs.',
+      title: 'Custom Website Design, Development & Maintenance',
+      description: 'We create tailored websites with modern design, robust development, and ongoing maintenance to keep your online presence running smoothly.',
       icon: 'ri-code-s-slash-line',
       color: 'from-purple-500 to-blue-500'
     },
     {
-      title: 'UI/UX Design',
-      description: 'Our design team creates intuitive, engaging user experiences that captivate and convert.',
-      icon: 'ri-layout-4-line',
+      title: 'Software & App Development',
+      description: 'Custom software solutions and applications designed to streamline your business processes and enhance user experience.',
+      icon: 'ri-apps-2-line',
       color: 'from-blue-500 to-teal-500'
     },
     {
-      title: '3D Visualization',
-      description: 'Immersive 3D graphics and animations that bring your ideas to life and engage your audience.',
-      icon: 'ri-3d-space-fill',
+      title: 'Mobile-Friendly Websites & Apps',
+      description: 'Responsive designs that work flawlessly across all devices, ensuring your customers have a seamless experience wherever they are.',
+      icon: 'ri-smartphone-line',
       color: 'from-teal-500 to-green-500'
     },
     {
-      title: 'Digital Marketing',
-      description: 'Strategic digital marketing solutions that drive traffic, generate leads, and boost conversions.',
-      icon: 'ri-line-chart-line',
+      title: 'E-commerce Solutions',
+      description: 'Complete online store development with secure payment processing, inventory management, and user-friendly shopping experiences.',
+      icon: 'ri-shopping-cart-2-line',
       color: 'from-green-500 to-yellow-500'
     }
   ];
@@ -109,6 +109,26 @@ const Home = () => {
       content: 'The 3D visualizations created by Elite8Digital brought our product to life in ways we never imagined. The immersive experience has been a key factor in our successful product launch.',
       image: avatar3
     }
+  ];
+
+  // Process data
+  const process = [
+    {
+      title: 'Discovery',
+      description: 'We start by understanding your business, goals, and target audience to define the project scope.',
+    },
+    {
+      title: 'Strategy',
+      description: 'We develop a comprehensive strategy and roadmap to achieve your business objectives.',
+    },
+    {
+      title: 'Design & Development',
+      description: 'Our team creates stunning designs and builds robust, scalable solutions.',
+    },
+    {
+      title: 'Launch & Support',
+      description: 'We ensure a smooth launch and provide ongoing support to help you succeed.',
+    },
   ];
 
   // Tech stack data
@@ -185,7 +205,8 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <GradientButton href="#work" gradient="purple-blue" size="lg" hoverEffect="both">
+               {/* href="#work" */}
+              <GradientButton href="#" gradient="purple-blue" size="lg" hoverEffect="both"> 
                 Explore Our Work
               </GradientButton>
               <GradientButton href="#contact" gradient="blue-teal" size="lg" hoverEffect="both">
@@ -415,7 +436,8 @@ const Home = () => {
                           </span>
                         ))}
                       </div>
-                      <Link to="work" className="text-sm font-medium text-purple-400 flex items-center group">
+                      {/* to="work" */}
+                      <Link to="#" className="text-sm font-medium text-purple-400 flex items-center group">
                         View Project
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -428,9 +450,9 @@ const Home = () => {
           </div>
           
           <div className="text-center mt-12">
-            <AnimatedButton href="#work" variant="outline" size="lg">
+            {/* <AnimatedButton href="#work" variant="outline" size="lg">
               View All Projects
-            </AnimatedButton>
+            </AnimatedButton> */}
           </div>
         </div>
       </section>
@@ -489,7 +511,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 relative overflow-hidden">
+      {/* Tech Stack section */}
+
+      {/* <section className="py-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -525,6 +549,49 @@ const Home = () => {
                   <i className={`${tech.icon} text-3xl`} style={{ color: tech.color }}></i>
                 </motion.div>
                 <h3 className="text-lg font-medium">{tech.name}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+      
+      <section className="py-20 bg-secondary relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="gradient-text">Our Process</span>
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              We follow a structured approach to deliver exceptional results for every project.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {process.map((step, index) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 relative">
+                    <span className="text-primary font-bold text-xl">{index + 1}</span>
+                    {index < process.length - 1 && (
+                      <div className="absolute top-1/2 left-full w-full h-0.5 bg-primary/10 hidden md:block"></div>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-white/70">{step.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>

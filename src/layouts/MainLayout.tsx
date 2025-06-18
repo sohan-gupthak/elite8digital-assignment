@@ -67,7 +67,7 @@ const MainLayout = ({ children }: Props) => {
 					</Link>
 					
 					<nav className="hidden md:flex space-x-8">
-						{['Home', 'Work', 'About', 'Contact'].map((item, index) => (
+						{['Home', 'About', 'Contact'].map((item, index) => (
 							<motion.div 
 								key={item} 
 								initial={{ opacity: 0, y: -20 }}
@@ -251,7 +251,7 @@ const MainLayout = ({ children }: Props) => {
 						{[
 							{ title: 'Navigation', links: [
 								{ name: 'Home', path: '/' },
-								{ name: 'Work', path: '/work' },
+								// { name: 'Work', path: '/work' },
 								{ name: 'About', path: '/about' },
 								{ name: 'Contact', path: '/contact' }
 							]},
@@ -262,8 +262,8 @@ const MainLayout = ({ children }: Props) => {
 								{ name: 'Digital Marketing', path: '#' }
 							]},
 							{ title: 'Contact', links: [
-								{ name: 'hello@elite8.com', path: 'mailto:hello@elite8.com' },
-								{ name: '+1 (555) 123-4567', path: 'tel:+15551234567' },
+								{ name: 'help@elite8digital.in', path: 'mailto:help@elite8digital.in' },
+								{ name: '+6260894977', path: 'tel:+6260894977' },
 								{ name: '123 Design Street', path: '#' },
 								{ name: 'Creative District', path: '#' }
 							]}

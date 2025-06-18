@@ -98,7 +98,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Email</h3>
-                    <p className="text-gray-400">hello@elite8.com</p>
+                    <p className="text-gray-400">help@elite8digital.in</p>
                   </div>
                 </div>
                 
@@ -110,7 +110,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Phone</h3>
-                    <p className="text-gray-400">+1 (555) 123-4567</p>
+                    <p className="text-gray-400">+6260894977</p>
                   </div>
                 </div>
                 
