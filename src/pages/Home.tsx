@@ -191,7 +191,7 @@ const Home = () => {
             </div>
             
             <motion.p 
-              className="text-lg md:text-xl text-white/70 max-w-xl mb-8 md:mb-10"
+              className="text-lg md:text-xl text-white/70 mb-8 md:mb-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -210,7 +210,7 @@ const Home = () => {
                 Explore Our Work
               </GradientButton> */}
               <GradientButton href="#contact" gradient="blue-teal" size="lg" hoverEffect="both" className="w-full">
-                Get in Touch
+                <span className="lg:pl-12 md:pl-24 sm:pl-24">Get in Touch</span>
               </GradientButton>
             </motion.div>
           </motion.div>
