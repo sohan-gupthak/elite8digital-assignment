@@ -114,7 +114,9 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
+                {/* location item if needed  */}
+                
+                {/* <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-primary">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -125,7 +127,7 @@ const Contact = () => {
                     <h3 className="text-lg font-medium mb-1">Location</h3>
                     <p className="text-gray-400">123 Design Street, Creative District</p>
                   </div>
-                </div>
+                </div> */}
               </div>
               
               <div className="mt-12">
@@ -253,7 +255,9 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-secondary">
+      {/* address card if needed  */}
+
+      {/* <section className="py-24 bg-secondary">
         <div className="container px-4 mx-auto">
           <div 
             className="reveal rounded-lg overflow-hidden h-[400px] bg-black/50" 
@@ -273,7 +277,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </MainLayout>
   );
 };

@@ -457,6 +457,49 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-secondary relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="gradient-text">Our Process</span>
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              We follow a structured approach to deliver exceptional results for every project.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {process.map((step, index) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 relative">
+                    <span className="text-primary font-bold text-xl">{index + 1}</span>
+                    {index < process.length - 1 && (
+                      <div className="absolute top-1/2 left-full w-full h-0.5 bg-primary/10 hidden md:block"></div>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-white/70">{step.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-black/10 z-0"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -554,49 +597,6 @@ const Home = () => {
           </div>
         </div>
       </section> */}
-      
-      <section className="py-20 bg-secondary relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="gradient-text">Our Process</span>
-            </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              We follow a structured approach to deliver exceptional results for every project.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {process.map((step, index) => (
-              <motion.div
-                key={step.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 relative">
-                    <span className="text-primary font-bold text-xl">{index + 1}</span>
-                    {index < process.length - 1 && (
-                      <div className="absolute top-1/2 left-full w-full h-0.5 bg-primary/10 hidden md:block"></div>
-                    )}
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-white/70">{step.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20 z-0"></div>
