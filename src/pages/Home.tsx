@@ -156,7 +156,7 @@ const Home = () => {
           <FloatingElements count={20} className="z-10" />
         </div>
 
-        <div className="container relative z-10 px-4 py-32 mx-auto flex flex-col lg:flex-row items-center">
+        <div className="container relative z-10 px-4 py-20 md:py-28 lg:py-32 mx-auto flex flex-col lg:flex-row items-center">
           <motion.div 
             className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0"
             initial={{ opacity: 0, y: 20 }}
@@ -178,20 +178,20 @@ const Home = () => {
             <div className="mb-6">
               <TextReveal 
                 text="Crafting Digital" 
-                className="text-5xl md:text-7xl font-bold tracking-tight leading-tight gradient-text" 
+                className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight gradient-text" 
                 animationType="slide" 
                 delay={0.3}
               />
               <TextReveal 
                 text="Experiences That Inspire" 
-                className="text-5xl md:text-7xl font-bold tracking-tight leading-tight text-white mt-2" 
+                className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight text-white mt-2" 
                 animationType="slide" 
                 delay={0.4}
               />
             </div>
             
             <motion.p 
-              className="text-xl text-white/70 max-w-xl mb-10"
+              className="text-lg md:text-xl text-white/70 max-w-xl mb-8 md:mb-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -200,16 +200,16 @@ const Home = () => {
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full max-w-md mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
                {/* href="#work" */}
-              <GradientButton href="#" gradient="purple-blue" size="lg" hoverEffect="both"> 
+              {/* <GradientButton href="#" gradient="purple-blue" size="lg" hoverEffect="both" className="w-full"> 
                 Explore Our Work
-              </GradientButton>
-              <GradientButton href="#contact" gradient="blue-teal" size="lg" hoverEffect="both">
+              </GradientButton> */}
+              <GradientButton href="#contact" gradient="blue-teal" size="lg" hoverEffect="both" className="w-full">
                 Get in Touch
               </GradientButton>
             </motion.div>
@@ -221,12 +221,12 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className="relative w-full h-[500px] lg:h-[600px] flex items-center justify-center">
+            <div className="relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[600px] flex items-center justify-center">
               <div className="relative w-full h-full">
                 <motion.img 
                   src={abstractShape1} 
                   alt="Abstract Shape" 
-                  className="absolute w-64 h-64 top-10 left-10 z-10" 
+                  className="absolute w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 top-5 left-5 sm:top-10 sm:left-10 z-10" 
                   animate={{ 
                     y: [0, -20, 0],
                     rotate: [0, 5, 0]
@@ -241,7 +241,7 @@ const Home = () => {
                 <motion.img 
                   src={abstractShape2} 
                   alt="Abstract Shape" 
-                  className="absolute w-80 h-80 bottom-0 right-0 z-0" 
+                  className="absolute w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 bottom-0 right-0 z-0" 
                   animate={{ 
                     y: [0, 20, 0],
                     rotate: [0, -5, 0]
@@ -270,12 +270,12 @@ const Home = () => {
         </div>
         
         <motion.div 
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+          className="absolute bottom-4 md:bottom-8 left-0 right-0 mx-auto w-full flex flex-col items-center justify-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.2 }}
         >
-          <span className="text-white/50 text-sm mb-2">Scroll to explore</span>
+          <span className="text-white/50 text-sm mb-2 text-center">Scroll to explore</span>
           <motion.div 
             className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1"
             initial={{ y: 0 }}
@@ -306,18 +306,18 @@ const Home = () => {
             <GlowingText 
               text="Our Services" 
               size="xl" 
-              className="mb-4" 
+              className="mb-3 md:mb-4" 
               glowColor="rgba(139, 92, 246, 0.6)" 
             />
             <TextReveal
               text="We offer a comprehensive range of digital services to help your business thrive in the digital landscape."
-              className="text-xl text-white/70 max-w-2xl mx-auto"
+              className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto"
               animationType="fade"
               delay={0.3}
             />
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -326,17 +326,17 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <AnimatedCard className="p-8 h-full" glowColor={service.color.includes('purple') ? 'rgba(139, 92, 246, 0.3)' : 
+                <AnimatedCard className="p-5 sm:p-6 md:p-8 h-full" glowColor={service.color.includes('purple') ? 'rgba(139, 92, 246, 0.3)' : 
                                                    service.color.includes('blue') ? 'rgba(59, 130, 246, 0.3)' : 
                                                    service.color.includes('teal') ? 'rgba(20, 184, 166, 0.3)' : 
                                                    service.color.includes('green') ? 'rgba(16, 185, 129, 0.3)' : 
                                                    'rgba(249, 115, 22, 0.3)'}>
                   <div className="mb-6">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 transform transition-transform hover:scale-110 duration-300`}>
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-3 md:mb-4 transform transition-transform hover:scale-110 duration-300`}>
                       <i className={`${service.icon} text-2xl text-white`}></i>
                     </div>
-                    <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                    <p className="text-white/70">{service.description}</p>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">{service.title}</h3>
+                    <p className="text-sm sm:text-base text-white/70">{service.description}</p>
                   </div>
                   <GradientButton 
                     href="#contact" 
@@ -369,18 +369,18 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
               <span className="gradient-text">Featured Work</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto">
               Explore our latest projects and see how we've helped our clients achieve their digital goals.
             </p>
           </motion.div>
           
-          <div className="flex justify-center mb-10">
-            <div className="flex flex-wrap gap-2">
+          <div className="flex justify-center mb-10 px-2">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
               <motion.button
-                className={`px-4 py-2 rounded-full text-sm font-medium ${activeCategory === 'all' ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'}`}
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium ${activeCategory === 'all' ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'}`}
                 onClick={() => setActiveCategory('all')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -390,7 +390,7 @@ const Home = () => {
               {['Web Development', 'UI/UX Design', '3D Visualization', 'Digital Marketing'].map((category) => (
                 <motion.button
                   key={category}
-                  className={`px-4 py-2 rounded-full text-sm font-medium ${activeCategory === category ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'}`}
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium ${activeCategory === category ? 'bg-white text-black' : 'bg-white/10 text-white hover:bg-white/20'}`}
                   onClick={() => setActiveCategory(category)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -401,7 +401,7 @@ const Home = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-6 md:mt-8">
             {projects
               .filter(project => activeCategory === 'all' || project.category === activeCategory)
               .map((project, index) => (
@@ -466,15 +466,15 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
               <span className="gradient-text">Our Process</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto">
               We follow a structured approach to deliver exceptional results for every project.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {process.map((step, index) => (
               <motion.div
                 key={step.title}
@@ -485,14 +485,14 @@ const Home = () => {
                 className="relative"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 relative">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 relative">
                     <span className="text-primary font-bold text-xl">{index + 1}</span>
                     {index < process.length - 1 && (
                       <div className="absolute top-1/2 left-full w-full h-0.5 bg-primary/10 hidden md:block"></div>
                     )}
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-white/70">{step.description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-sm sm:text-base text-white/70">{step.description}</p>
                 </div>
               </motion.div>
             ))}

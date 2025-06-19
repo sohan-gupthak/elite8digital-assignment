@@ -10,49 +10,75 @@ export default function AnimatedCursor() {
   const [hidden, setHidden] = useState(true);
   const [clicked, setClicked] = useState(false);
   const [linkHovered, setLinkHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const cursorOuterRef = useRef<HTMLDivElement>(null);
   const cursorInnerRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      setHidden(false);
+    // Check if device is mobile
+    const checkIfMobile = () => {
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile|tablet/i.test(userAgent);
+      const isTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      setIsMobile(isMobileDevice || isTouchScreen || window.innerWidth < 768);
+      
+      // Remove custom cursor class if mobile
+      if (isMobileDevice || isTouchScreen || window.innerWidth < 768) {
+        document.body.classList.remove('custom-cursor');
+      } else {
+        document.body.classList.add('custom-cursor');
+      }
     };
     
-    const handleMouseDown = () => setClicked(true);
-    const handleMouseUp = () => setClicked(false);
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
     
-    const handleMouseEnter = () => setHidden(false);
-    const handleMouseLeave = () => setHidden(true);
-    
-    const handleLinkHoverEvents = () => {
-      document.querySelectorAll('a, button, [role="button"], input[type="submit"]').forEach(el => {
-        el.addEventListener('mouseenter', () => setLinkHovered(true));
-        el.addEventListener('mouseleave', () => setLinkHovered(false));
-      });
-    };
-    
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('mouseup', handleMouseUp);
-    document.addEventListener('mouseenter', handleMouseEnter);
-    document.addEventListener('mouseleave', handleMouseLeave);
-    
-    handleLinkHoverEvents();
+    // Only add mouse events if not mobile
+    if (!isMobile) {
+      const handleMouseMove = (e: MouseEvent) => {
+        setPosition({ x: e.clientX, y: e.clientY });
+        setHidden(false);
+      };
+      
+      const handleMouseDown = () => setClicked(true);
+      const handleMouseUp = () => setClicked(false);
+      
+      const handleMouseEnter = () => setHidden(false);
+      const handleMouseLeave = () => setHidden(true);
+      
+      const handleLinkHoverEvents = () => {
+        document.querySelectorAll('a, button, [role="button"], input[type="submit"]').forEach(el => {
+          el.addEventListener('mouseenter', () => setLinkHovered(true));
+          el.addEventListener('mouseleave', () => setLinkHovered(false));
+        });
+      };
+      
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mousedown', handleMouseDown);
+      document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('mouseenter', handleMouseEnter);
+      document.addEventListener('mouseleave', handleMouseLeave);
+      
+      handleLinkHoverEvents();
+      
+      return () => {
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mousedown', handleMouseDown);
+        document.removeEventListener('mouseup', handleMouseUp);
+        document.removeEventListener('mouseenter', handleMouseEnter);
+        document.removeEventListener('mouseleave', handleMouseLeave);
+        
+        document.querySelectorAll('a, button, [role="button"], input[type="submit"]').forEach(el => {
+          el.removeEventListener('mouseenter', () => setLinkHovered(true));
+          el.removeEventListener('mouseleave', () => setLinkHovered(false));
+        });
+      };
+    }
     
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('mouseenter', handleMouseEnter);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      
-      document.querySelectorAll('a, button, [role="button"], input[type="submit"]').forEach(el => {
-        el.removeEventListener('mouseenter', () => setLinkHovered(true));
-        el.removeEventListener('mouseleave', () => setLinkHovered(false));
-      });
+      window.removeEventListener('resize', checkIfMobile);
     };
-  }, []);
+  }, [isMobile]);
   
   useEffect(() => {
     if (cursorInnerRef.current && cursorOuterRef.current) {
