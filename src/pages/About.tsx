@@ -2,6 +2,8 @@ import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '@/layouts/MainLayout';
 
+import Elite8Digital from '@/assets/images/elite8digital-logo.png';
+
 type TeamMember = {
 	name: string;
 	role: string;
@@ -93,7 +95,7 @@ const About = () => {
 							<div className="aspect-square bg-muted relative overflow-hidden rounded-2xl">
 								<div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-emerald-500/20"></div>
 								<div className="absolute inset-0 flex items-center justify-center">
-									<div className="text-6xl md:text-8xl font-bold text-white/10">ELITE8</div>
+									<img src={Elite8Digital} alt="Elite8Digital" className="w-full h-full object-cover" />
 								</div>
 							</div>
 						</div>
@@ -225,12 +227,12 @@ const stats: Stat[] = [
 		description: 'Successful projects delivered to clients worldwide.',
 	},
 	{
-		value: '15+',
+		value: '5+',
 		label: 'Team Members',
 		description: 'Talented designers, developers, and strategists.',
 	},
 	{
-		value: '1+',
+		value: '5+',
 		label: 'Years of Experience',
 		description: 'Creating exceptional digital experiences.',
 	},

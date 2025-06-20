@@ -234,7 +234,7 @@ const MainLayout = ({ children }: Props) => {
 							</div>
 							<p className="text-white/70 mb-6">Creating immersive digital experiences that captivate and convert. We blend creativity with cutting-edge technology.</p>
 							<div className="flex space-x-4">
-								{['twitter', 'instagram', 'linkedin', 'dribbble'].map((social) => (
+								{['linkedin'].map((social) => (
 									<motion.a
 										key={social}
 										href={social === 'linkedin' ? 'https://www.linkedin.com/company/elite8-digital/about/' : '#'}
@@ -265,7 +265,7 @@ const MainLayout = ({ children }: Props) => {
 							]},
 							{ title: 'Contact', links: [
 								{ name: 'help@elite8digital.in', path: 'mailto:help@elite8digital.in' },
-								{ name: '+6260894977', path: 'tel:+6260894977' }
+								{ name: '+91 6260894977', path: 'tel:+916260894977' }
 							]}
 						].map((column, columnIndex) => (
 							<motion.div

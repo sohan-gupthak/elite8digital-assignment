@@ -256,7 +256,7 @@ const Home = () => {
                 
                 <div className="absolute inset-0 flex items-center justify-center z-20">
                   <GlowingText 
-                    text="ELITE8" 
+                    text="ELITE8 DIGITAL" 
                     size="2xl" 
                     glowColor="rgba(139, 92, 246, 0.8)" 
                     className="mb-4" 
