@@ -50,7 +50,7 @@ const About = () => {
 							About <span className="text-gradient">Us</span>
 						</h1>
 						<p className="text-xl text-gray-400">
-							We're a team of passionate designers, developers, and creatives dedicated to crafting exceptional digital experiences.
+							We bring imagination to life with modern design, smart code, and lasting impact.
 						</p>
 					</div>
 				</div>
@@ -65,13 +65,24 @@ const About = () => {
 						>
 							<h2 className="text-3xl md:text-5xl font-bold mb-6">Our Story</h2>
 							<p className="text-gray-400 mb-4">
-								Founded in 2020, ELITE8 began with a simple mission: to create digital experiences that inspire and engage. What started as a small team of passionate designers and developers has grown into a full-service digital agency with clients around the world.
+								Every great digital product starts with a spark — an idea, a dream, a “what if?” At Elite8 Digital, that spark is what drives us.
 							</p>
 							<p className="text-gray-400 mb-4">
-								We believe that great design is more than just aesthetics—it's about solving problems, creating intuitive user experiences, and driving business results. Our approach combines creativity with strategy to deliver solutions that not only look beautiful but also perform exceptionally well.
+								We started with a simple belief: technology should feel human. It should empower, inspire, and create real impact. What began as a small group of passionate minds, united by creativity and code, has now evolved into a full-service digital agency helping brands, colleges, and startups build the future they envision.
 							</p>
-							<p className="text-gray-400">
-								Today, we continue to push the boundaries of digital design and development, embracing new technologies and methodologies to create cutting-edge solutions for our clients.
+							<p className="text-gray-400 mb-4">
+								We saw how many institutions struggled with outdated platforms, clunky designs, or websites that couldn’t keep up with their growth. So, we stepped in — not just to build software, but to build trust, transform experiences, and scale ideas.
+							</p>
+							<p className="text-gray-400 mb-4">
+								From beautifully designed websites and responsive mobile apps to robust platforms used by 1 lakh+ users, we craft digital solutions that are not just functional — they’re unforgettable.
+							</p>
+							<p className="text-gray-400 mb-4">
+								Our story is still being written. Every project we take on is another chapter, another chance to innovate, and another opportunity to create something that makes people say:
+								“Wow. That’s Elite.”
+							</p>
+							<p className="text-gray-400 mb-4">
+								We’re not just here to develop. <br />
+								We’re here to imagine, innovate, and build— with heart.
 							</p>
 						</div>
 						

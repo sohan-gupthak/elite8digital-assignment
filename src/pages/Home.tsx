@@ -24,6 +24,8 @@ import avatar1 from '../assets/images/avatar-1.svg';
 import avatar2 from '../assets/images/avatar-2.svg';
 import avatar3 from '../assets/images/avatar-3.svg';
 
+import "../styles/global.css";
+
 // We are using Remix icons for tech stack
 
 const Home = () => {
@@ -163,18 +165,6 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-block py-2 px-4 mb-6 border border-purple-500/30 rounded-full text-sm font-medium text-purple-400"
-            >
-              <span className="flex items-center">
-                <span className="w-2 h-2 rounded-full bg-purple-500 mr-2 animate-pulse"></span>
-                Innovative Digital Agency
-              </span>
-            </motion.div>
-            
             <div className="mb-6">
               <TextReveal 
                 text="Crafting Digital" 
@@ -200,7 +190,7 @@ const Home = () => {
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full max-w-md mx-auto lg:mx-0"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full max-w-md mx-auto lg:mx-0 lg:justify-start justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
@@ -209,9 +199,21 @@ const Home = () => {
               {/* <GradientButton href="#" gradient="purple-blue" size="lg" hoverEffect="both" className="w-full"> 
                 Explore Our Work
               </GradientButton> */}
-              <GradientButton href="#contact" gradient="blue-teal" size="lg" hoverEffect="both" className="w-full">
-                <span className="lg:pl-12 md:pl-24 sm:pl-24">Get in Touch</span>
-              </GradientButton>
+              <div className="hidden md:block">
+                <GradientButton href="#contact" gradient="blue-teal" size="lg" hoverEffect="both" className="w-full">
+                  <span className="lg:pl-12 md:pl-24 sm:pl-24">Get in Touch</span>
+                </GradientButton>
+              </div>
+              
+              <div className="md:hidden test-container flex justify-center max-w-[200px] mx-auto">
+                <a href="#contact" className="test-button flex items-center">
+                  Get in Touch
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7-7 7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h16" />
+                  </svg>
+                </a>
+              </div>
             </motion.div>
           </motion.div>
           
