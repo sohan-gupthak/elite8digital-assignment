@@ -41,7 +41,7 @@ const MainLayout = ({ children }: Props) => {
 					))}
 				</div>
 			</div>
-			<header className="sticky top-0 z-50 backdrop-blur-xl bg-black/70 border-b border-white/10">
+			<header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/70 border-b border-white/10">
 				<motion.div 
 					initial={{ y: -100 }}
 					animate={{ y: 0 }}
@@ -190,7 +190,7 @@ const MainLayout = ({ children }: Props) => {
 				)}
 			</AnimatePresence>
 			
-			<main className="flex-grow">
+			<main className="flex-grow pt-24">
 				{children}
 			</main>
 			
