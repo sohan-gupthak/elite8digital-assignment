@@ -232,13 +232,13 @@ const stats: Stat[] = [
 		description: 'Talented designers, developers, and strategists.',
 	},
 	{
-		value: '5+',
+		value: '2+',
 		label: 'Years of Experience',
 		description: 'Creating exceptional digital experiences.',
 	},
 	{
-		value: '10+',
-		label: 'Happy Clients',
+		value: '100%',
+		label: 'Clients Satisfaction',
 		description: 'Trusted by businesses around the world.',
 	},
 ];
