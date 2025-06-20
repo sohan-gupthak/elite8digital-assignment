@@ -237,7 +237,9 @@ const MainLayout = ({ children }: Props) => {
 								{['twitter', 'instagram', 'linkedin', 'dribbble'].map((social) => (
 									<motion.a
 										key={social}
-										href="#"
+										href={social === 'linkedin' ? 'https://www.linkedin.com/company/elite8-digital/about/' : '#'}
+										target='_blank'
+										rel='noopener noreferrer'
 										className="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-purple-400 transition-colors"
 										whileHover={{ y: -5, scale: 1.1 }}
 										whileTap={{ scale: 0.95 }}

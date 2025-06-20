@@ -220,7 +220,7 @@ const About = () => {
 
 const stats: Stat[] = [
 	{
-		value: '100+',
+		value: '30+',
 		label: 'Projects Completed',
 		description: 'Successful projects delivered to clients worldwide.',
 	},
@@ -230,12 +230,12 @@ const stats: Stat[] = [
 		description: 'Talented designers, developers, and strategists.',
 	},
 	{
-		value: '5+',
+		value: '1+',
 		label: 'Years of Experience',
-		description: 'Creating exceptional digital experiences since 2020.',
+		description: 'Creating exceptional digital experiences.',
 	},
 	{
-		value: '30+',
+		value: '10+',
 		label: 'Happy Clients',
 		description: 'Trusted by businesses around the world.',
 	},

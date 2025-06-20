@@ -20,9 +20,9 @@ import project1 from '../assets/images/project-1.svg';
 import project2 from '../assets/images/project-2.svg';
 import project3 from '../assets/images/project-3.svg';
 import project4 from '../assets/images/project-4.svg';
-import avatar1 from '../assets/images/avatar-1.svg';
-import avatar2 from '../assets/images/avatar-2.svg';
-import avatar3 from '../assets/images/avatar-3.svg';
+import avatar1 from '../assets/images/vikas-testimonials.jpg';
+import avatar2 from '../assets/images/letstaxify-testimonials.jpg';
+import avatar3 from '../assets/images/sunita-testimonials.png';
 
 import "../styles/global.css";
 
@@ -31,11 +31,10 @@ import "../styles/global.css";
 const Home = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  // Services data
   const services = [
     {
       title: 'Custom Website Design, Development & Maintenance',
-      description: 'We create tailored websites with modern design, robust development, and ongoing maintenance to keep your online presence running smoothly.',
+      description: 'We design tailored websites with modern aesthetics, solid development, and continuous maintenance. Our SEO-friendly approach helps boost your search engine rankings and attract more customers.',
       icon: 'ri-code-s-slash-line',
       color: 'from-purple-500 to-blue-500'
     },
@@ -94,21 +93,21 @@ const Home = () => {
   // Testimonials data
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechVision',
-      content: 'Elite8Digital transformed our online presence with a stunning website that perfectly captures our brand identity. Their attention to detail and creative approach exceeded our expectations.',
+      name: 'Dr. Vikas Bhalekar',
+      role: 'MBBS, MD Radiation oncology',
+      content: 'As a medical professional, I wanted a website that reflected both trust and quality — and Elite8 Digital absolutely delivered. Their team understood my vision from day one and built a platform that’s clean, fast, and easy for my patients to navigate. Since launching the new site, appointment inquiries have nearly doubled. Their attention to detail and design truly sets them apart.',
       image: avatar1
     },
     {
-      name: 'Michael Chen',
-      role: 'Marketing Director, Innovate Inc',
-      content: 'Working with Elite8Digital was a game-changer for our company. Their strategic approach to digital marketing helped us reach new audiences and significantly increase our conversion rates.',
+      name: 'CA Aastha Bansal',
+      role: 'Founder, LetsTaxify',
+      content: 'I’m extremely pleased with the outstanding work delivered by Elite 8 Digital Private Limited on our website www.letstaxify.com. The team not only completed the project well before the committed deadline but also delivered a design that was modern, user-friendly, and exceeded expectations. Their professionalism, attention to detail, and creative approach made the entire experience seamless. I highly recommend them to anyone looking for top-notch web development services.',
       image: avatar2
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Product Manager, Nexus',
-      content: 'The 3D visualizations created by Elite8Digital brought our product to life in ways we never imagined. The immersive experience has been a key factor in our successful product launch.',
+      name: 'Tarunesh Bhargava',
+      role: 'Owner, Sunita Infrastructure',
+      content: 'We partnered with Elite8 Digital to revamp our construction company’s website, and the results were outstanding. They created a modern, responsive platform that perfectly showcases our projects and services. The design reflects our brand’s professionalism, and we’ve seen a clear boost in client inquiries since the launch. Their team was proactive, creative, and always one step ahead throughout the process.',
       image: avatar3
     }
   ];
@@ -167,13 +166,13 @@ const Home = () => {
           >
             <div className="mb-6">
               <TextReveal 
-                text="Crafting Digital" 
+                text="From Imagination" 
                 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight gradient-text" 
                 animationType="slide" 
                 delay={0.3}
               />
               <TextReveal 
-                text="Experiences That Inspire" 
+                text="to Innovation - We Build It" 
                 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight text-white mt-2" 
                 animationType="slide" 
                 delay={0.4}
@@ -186,7 +185,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              We blend creativity with cutting-edge technology to build immersive digital experiences that captivate audiences and drive exceptional results.
+              We craft sleek, scalable websites, apps, and platforms — built to perform, designed to inspire, and made for everyone.
             </motion.p>
             
             <motion.div 

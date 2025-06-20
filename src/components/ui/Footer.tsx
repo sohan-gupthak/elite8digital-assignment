@@ -36,7 +36,7 @@ export default function Footer() {
   const socialLinks = [
     { name: 'Twitter', icon: 'ri-twitter-fill', href: '#' },
     { name: 'Instagram', icon: 'ri-instagram-fill', href: '#' },
-    { name: 'LinkedIn', icon: 'ri-linkedin-fill', href: '#' },
+    { name: 'LinkedIn', icon: 'ri-linkedin-fill', href: 'https://www.linkedin.com/company/elite8-digital/about/' },
     { name: 'GitHub', icon: 'ri-github-fill', href: '#' },
   ];
 
