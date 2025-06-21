@@ -34,12 +34,6 @@ const CurtainAnimation = ({ onComplete }: CurtainAnimationProps) => {
       setIsOpening(true);
       setHasInteracted(true);
       
-      // Play curtain sound effect
-      const curtainSound = new Audio();
-      curtainSound.src = 'https://assets.mixkit.co/active_storage/sfx/212/212-preview.mp3';
-      curtainSound.volume = 0.5;
-      curtainSound.play().catch(e => console.log('Audio play failed:', e));
-      
       // Animate the curtains
       curtainControls.start({
         opacity: [1, 0],
