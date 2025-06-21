@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import AnimatedCursor from '../components/ui/AnimatedCursor';
+import logo from '../assets/images/elite8digital-nav.png';
 
 type Props = {
 	children: React.ReactNode;
@@ -55,9 +56,8 @@ const MainLayout = ({ children }: Props) => {
 								whileHover={{ scale: 1.05 }}
 								transition={{ type: 'spring', stiffness: 500 }}
 							>
-								ELITE8
+								<img src={logo} alt="Elite8 Digital Logo" className="h-10" />
 							</motion.span>
-							<span className="text-white text-2xl font-bold">DIGITAL</span>
 						</div>
 						<motion.div 
 							className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-purple-500 to-blue-500"
@@ -229,8 +229,7 @@ const MainLayout = ({ children }: Props) => {
 							transition={{ duration: 0.5 }}
 						>
 							<div className="flex items-center mb-4">
-								<span className="text-2xl font-bold gradient-text mr-1">ELITE8</span>
-								<span className="text-white text-2xl font-bold">DIGITAL</span>
+								<img src={logo} alt="Elite8 Digital Logo" className="h-10" />
 							</div>
 							<p className="text-white/70 mb-6">Creating immersive digital experiences that captivate and convert. We blend creativity with cutting-edge technology.</p>
 							<div className="flex space-x-4">

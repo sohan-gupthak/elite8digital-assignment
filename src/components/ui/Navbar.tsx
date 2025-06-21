@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedButton from './AnimatedButton';
+import logo from '../../assets/images/elite8digital-nav.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,10 +52,7 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
-            <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
-              ELITE8
-            </span>
-            <span className="text-white">DIGITAL</span>
+            <img src={logo} alt="Elite8 Digital Logo" className="h-10" />
           </motion.div>
         </Link>
 

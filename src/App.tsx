@@ -1,11 +1,13 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import AppRoutes from './routes';
 import AnimatedCursor from './components/ui/AnimatedCursor';
+import CurtainAnimation from './components/ui/CurtainAnimation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
 const App = () => {
 	const location = useLocation();
+	const [showCurtain, setShowCurtain] = useState(true);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -19,9 +21,14 @@ const App = () => {
 		};
 	}, []);
 
+	const handleCurtainComplete = () => {
+		setShowCurtain(false);
+	};
+
 	return (
 		<>
 			<AnimatedCursor />
+			{showCurtain && <CurtainAnimation onComplete={handleCurtainComplete} />}
 			<AnimatePresence mode="wait">
 				<motion.div
 					initial={{ opacity: 0 }}
