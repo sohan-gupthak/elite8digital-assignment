@@ -52,7 +52,7 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
-            <img src={logo} alt="Elite8 Digital Logo" className="h-10" />
+            <img src={logo} alt="Elite8 Digital Logo" className="h-14" />
           </motion.div>
         </Link>
 

@@ -229,7 +229,7 @@ const MainLayout = ({ children }: Props) => {
 							transition={{ duration: 0.5 }}
 						>
 							<div className="flex items-center mb-4">
-								<img src={logo} alt="Elite8 Digital Logo" className="h-10" />
+								<img src={logo} alt="Elite8 Digital Logo" className="h-16"/>
 							</div>
 							<p className="text-white/70 mb-6">Creating immersive digital experiences that captivate and convert. We blend creativity with cutting-edge technology.</p>
 							<div className="flex space-x-4">
